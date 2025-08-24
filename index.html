@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="home">
+    <section class="intro">
+        <h2>Welcome to My Thoughts</h2>
+        <p>This is where I share my reflections on life, literature, and everything in between. Join me on this journey of critical thinking and personal growth.</p>
+    </section>
+
+    <section class="recent-posts">
+        <h3>Recent Posts</h3>
+        {% if site.posts.size > 0 %}
+            <div class="post-list">
+                {% for post in site.posts limit: 5 %}
+                    <article class="post-preview">
+                        <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
+                        <div class="post-meta">
+                            <time>{{ post.date | date: "%B %d, %Y" }}</time>
+                            {% if post.categories %}
+                                <span class="categories">
+                                    {% for category in post.categories %}
+                                        <span class="category">{{ category }}</span>
+                                    {% endfor %}
+                                </span>
+                            {% endif %}
+                        </div>
+                        <div class="post-excerpt">
+                            {{ post.excerpt | strip_html | truncatewords: 30 }}
+                        </div>
+                        <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No posts yet. Check back soon!</p>
+        {% endif %}
+    </section>
+</div>

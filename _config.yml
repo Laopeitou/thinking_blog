@@ -1,0 +1,40 @@
+title: Laopeitou - Thoughts & Reflections
+description: A space for my thoughts, critical thinking, and reflections on life and literature
+baseurl: ""
+url: "https://Laopeito.github.io"
+author: Laopeitou
+email: lihongpeisz@163.com
+
+# Jekyll Settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Permalink structure
+permalink: /:categories/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Archive
+    url: /archive/

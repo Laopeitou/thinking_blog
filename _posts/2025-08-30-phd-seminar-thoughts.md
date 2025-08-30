@@ -4,7 +4,6 @@ title: "博三听讲座随想"
 date: 2025-08-30
 categories: [personal, reflections]
 tags: [PhD life]
-permalink: /personal/reflections/2025/08/30/博三听讲座随想/
 ---
 
 今天学院的周五学术讲座演讲人之一是一个和我同期入学的隔壁课题组的英国妹子。听她讲的时候
